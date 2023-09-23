@@ -3,7 +3,6 @@ package com.djalves424.ProjetoClientCRUD.entities;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDate;
@@ -21,8 +20,6 @@ public class Client {
     private String name;
     private String cpf;
     private Double income;
-
-    @PastOrPresent
     private LocalDate birthDate;
     private Integer children;
 
