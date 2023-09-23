@@ -1,9 +1,13 @@
 package com.djalves424.ProjetoClientCRUD.dto;
 
 import com.djalves424.ProjetoClientCRUD.entities.Client;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 
 import java.time.LocalDate;
 
+@Getter
+@AllArgsConstructor
 public class ClientDTO {
 
     private Long id;
@@ -13,15 +17,6 @@ public class ClientDTO {
     private LocalDate birthDate;
     private Integer children;
 
-    public ClientDTO(Long id, String name, String cpf, Double income, LocalDate birthDate, Integer children) {
-        this.id = id;
-        this.name = name;
-        this.cpf = cpf;
-        this.income = income;
-        this.birthDate = birthDate;
-        this.children = children;
-    }
-
     public ClientDTO(Client entity) {
         id = entity.getId();
         name = entity.getName();
@@ -30,29 +25,5 @@ public class ClientDTO {
         birthDate = entity.getBirthDate();
         children = entity.getChildren();
 
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public Double getIncome() {
-        return income;
-    }
-
-    public LocalDate getBirthDate() {
-        return birthDate;
-    }
-
-    public Integer getChildren() {
-        return children;
     }
 }
